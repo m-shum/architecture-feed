@@ -18,17 +18,19 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: black;
   font-size: 64px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 #nav {
   padding: 30px;
 
   a {
-    font-weight: bold;
-    color: #2c3e50;
-
     &.router-link-exact-active {
       color: #42b983;
     }
@@ -37,6 +39,6 @@
 
 img {
   max-width: 800px;
-  max-height: 600px;
+  max-height: 60vh;
 }
 </style>
