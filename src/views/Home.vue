@@ -1,13 +1,13 @@
 <template>
-  <div>
-    <transition-group name="fade" tag="div">
+  <div class="gallery-container">
+    <transition-group class="gallery-inner" name="fade" tag="div">
       <div v-for="i in [currentIndex]" :key="i">
         <img :src="currentImg" />
       </div>
     </transition-group>
     <div class="gallery-nav">
-      <a class="prev" @click="prev" href="#">&#10094; Previous</a>
-      <a class="next" @click="next" href="#">&#10095; Next</a>
+      <a class="prev" @click="prev" href="#">Previous</a>
+      <a class="next" @click="next" href="#">Next</a>
     </div>
   </div>
 </template>
