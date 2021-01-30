@@ -37,8 +37,8 @@ html {
 }
 
 @font-face {
-  font-family: Gosha Sans;
-  src: url(/assets/GoshaSans-Regular.otf);
+  font-family: "Gosha Sans";
+  src:local("Gosha Sans"), url(assets/GoshaSans-Regular.otf);
 }
 
 #app {
@@ -130,13 +130,8 @@ img {
   }
 }
 
-@media (max-width: 600px) {
-  #app {
-    font-size: 34px;
-  }
-}
 
-@media (max-width: 400px) {
+@media (max-width: 750px) {
   #app {
     font-size: 27px;
   }
