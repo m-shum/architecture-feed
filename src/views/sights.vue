@@ -1,7 +1,7 @@
 <template>
   <div class="gallery-container">
     <div class="gallery-inner">
-      <div v-for="i in [currentIndex]" :key="i">
+      <div class="gallery-image" v-for="i in [currentIndex]" :key="i">
         <img :src="currentImg" />
       </div>
     </div>

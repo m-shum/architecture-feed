@@ -38,7 +38,7 @@ html {
 
 @font-face {
   font-family: "Gosha Sans";
-  src:local("Gosha Sans"), url(assets/GoshaSans-Regular.otf);
+  src: local("Gosha Sans"), url(assets/GoshaSans-Regular.otf);
 }
 
 #app {
@@ -70,8 +70,13 @@ img {
 
 .gallery-inner {
   flex: 1;
-  align-items: center;
-  justify-content: center;
+}
+
+.gallery-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .gallery-nav {
@@ -130,7 +135,6 @@ img {
   }
 }
 
-
 @media (max-width: 750px) {
   #app {
     font-size: 27px;
@@ -139,8 +143,8 @@ img {
 
 @media (max-width: 600px) and (orientation: portrait) {
   img {
-  max-height: 90vh;
-  max-width:75vw;
-}
+    max-height: 90vh;
+    max-width: 75vw;
+  }
 }
 </style>
