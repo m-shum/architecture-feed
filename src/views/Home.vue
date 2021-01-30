@@ -1,10 +1,10 @@
 <template>
   <div class="gallery-container">
-    <transition-group class="gallery-inner" name="fade" mode="out-in" tag="div">
+    <div class="gallery-inner">
       <div v-for="i in [currentIndex]" :key="i">
         <img :src="currentImg" />
       </div>
-    </transition-group>
+    </div>
     <div class="gallery-nav">
       <a class="prev" @click="prev" href="#">Previous</a>
       <a class="next" @click="next" href="#">Next</a>
@@ -41,5 +41,4 @@ export default {
     }
   }
 };
-
 </script>

@@ -1,29 +1,36 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <div class="header-name"><p>BRUTAL</p><p>BRISTOL</p></div>
-      <div class="link-views">
-        <p><router-link to="/">SIGHTS</router-link></p>
-        <p><router-link to="/about">SOUNDS</router-link></p>
-      </div>
-    </div>
-  <router-view v-slot="{ Component }">
-    <transition name="fadeout">
-      <component :is="Component" />
-    </transition> 
-  </router-view>
+    <topNavigation />
+    <router-view v-slot="{ Component }">
+      <transition name="fadeout">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
+  <spinningCube />
 </template>
 
+<script>
+import topNavigation from "@/components/topNavigation.vue";
+import spinningCube from "@/components/spinningCube.vue";
+export default {
+  components: {
+    topNavigation,
+    spinningCube,
+  },
+};
+</script>
 
 <style lang="scss">
-
+// Default styles
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
@@ -35,10 +42,9 @@ html {
 }
 
 #app {
-  font-family: 'Gosha Sans', sans-serif;
+  font-family: "Gosha Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: black;
   font-size: 52px;
 }
@@ -48,35 +54,13 @@ a {
   color: inherit;
 }
 
-#nav {
-  a {
-    &.router-link-exact-active {
-      color:blue;
-    }
-  }
-  p {
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-  }
-  .header-name p:first-of-type {
-    transform: translateX(-9px);
-  }
-  .link-views p {
-    text-align:  right;
-  }
-}
+// Slideshow styles
 
 img {
-  max-width: 1000px;
+  max-width: 70vw;
   max-height: 70vh;
   outline: 5px solid black;
   outline-offset: -5px;
-}
-
-iframe {
-  width: 800px;
-  height: 500px;
 }
 
 .gallery-container {
@@ -94,16 +78,22 @@ iframe {
   bottom: 0;
 }
 
-.gallery-nav, .gallery-inner, .gallery-container, #nav {
+.gallery-nav,
+.gallery-inner,
+.gallery-container,
+#nav {
   display: flex;
 }
 
-.gallery-nav, #nav {
+.gallery-nav,
+#nav {
   position: fixed;
   justify-content: space-between;
   padding: 30px;
   width: 100%;
 }
+
+// Transitions
 
 .fadeout-enter,
 .fadeout-leave-to {
@@ -119,16 +109,43 @@ iframe {
   opacity: 1;
 }
 
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: all 0.8s ease;
   overflow: hidden;
   visibility: visible;
   opacity: 1;
   position: absolute;
 }
-.fade-enter, .fade-leave-to {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
   visibility: hidden;
 }
 
+// Media Queries
+@media (max-width: 820px) and (max-height: 600px) {
+  #app {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 600px) {
+  #app {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 400px) {
+  #app {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  img {
+  max-height: 90vh;
+  max-width:75vw;
+}
+}
 </style>
