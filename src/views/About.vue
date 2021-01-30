@@ -2,7 +2,7 @@
   <div class="gallery-container">
     <transition-group class="gallery-inner" name="fade" tag="div">
       <div v-for="i in [currentIndex]" :key="i">
-        <img :src="currentImg" />
+        <iframe :src="currentImg" allow="autoplay;"></iframe>
       </div>
     </transition-group>
     <div class="gallery-nav">
@@ -13,31 +13,22 @@
 </template>
 
 
+
 <script>
 export default {
-  name: "Slider",
+  name: "videoslides",
   data() {
     return {
       images: [
-        "https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-        "https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg"
+        "https://www.youtube.com/embed/NJ3CA_RThDY?modestbranding=1&showinfo=0&autoplay=1", "https://www.youtube.com/embed/DZFTDIGpyn0?controls=0&autoplay=1&modestbranding=1&showinfo=0", "https://www.youtube.com/embed/hbe3CQamF8k?controls=0&autoplay=1&modestbranding=1&showinfo=0", "https://www.youtube.com/embed/KY0TZQTwwbk?controls=0&autoplay=1&modestbranding=1&showinfo=0", "https://www.youtube.com/embed/8r31DFrFs5A?controls=0&autoplay=1&modestbranding=1&showinfo=0"
       ],
       timer: null,
       currentIndex: 0
     };
   },
 
-  mounted: function() {
-    this.startSlide();
-  },
 
   methods: {
-    startSlide: function() {
-      this.timer = setInterval(this.next, 4000);
-    },
-
     next: function() {
       this.currentIndex += 1;
     },

@@ -1,12 +1,14 @@
 <template>
-<div id="nav">
-  <div class="header-name"><p>BRUTAL</p><p>BRISTOL</p></div>
-  <div class="link-views">
-    <p><router-link to="/">SIGHTS</router-link></p>
-    <p><router-link to="/about">SOUNDS</router-link></p>
+  <div id="nav">
+    <div class="header-name"><p>BRUTAL</p><p>BRISTOL</p></div>
+    <div class="link-views">
+      <p><router-link to="/">SIGHTS</router-link></p>
+      <p><router-link to="/about">SOUNDS</router-link></p>
+    </div>
   </div>
-</div>
-  <router-view />
+  <transition name="fadeout" mode="out-in">
+      <router-view />
+  </transition>
 </template>
 
 
@@ -21,7 +23,7 @@ html {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
-  }
+}
 
 @font-face {
   font-family: Gosha Sans;
@@ -45,7 +47,7 @@ a {
 #nav {
   a {
     &.router-link-exact-active {
-      color: #42b983;
+      color:blue;
     }
   }
   p {
@@ -56,15 +58,22 @@ a {
   .header-name p:first-of-type {
     transform: translateX(-9px);
   }
-  .link-views p:first-of-type {
-    transform: translateX(12px);
+  .link-views p {
+    text-align:  right;
   }
 }
 
 img {
-  max-width: 800px;
+  max-width: 1000px;
   max-height: 70vh;
-  border: solid 4px black;
+  outline: 5px solid black;
+  outline-offset: -5px;
+    transition: all 0.9s;
+}
+
+iframe {
+  width: 800px;
+  height: 500px;
 }
 
 .gallery-container {
@@ -90,6 +99,20 @@ img {
   position: fixed;
   justify-content: space-between;
   padding: 30px;
-    width: 100%;
+  width: 100%;
 }
+
+.fadeout-enter {
+  opacity: 0;
+}
+
+.fadeout-enter-active,
+.fadeout-leave-active {
+  transition: all 3s ease;
+}
+
+.fadeout-leave-to {
+  opacity: 0;
+}
+
 </style>
