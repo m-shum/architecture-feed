@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # architecture-feed
 
 ## Project setup
@@ -22,3 +23,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# architecture-feed
+>>>>>>> b4130418d97512ffc1bc530dd86b3cd5017b31a5
