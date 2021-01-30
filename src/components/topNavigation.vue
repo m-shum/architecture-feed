@@ -6,7 +6,7 @@
     </div>
     <div class="link-views">
       <p><router-link to="/">SIGHTS</router-link></p>
-      <p><router-link to="/about">SOUNDS</router-link></p>
+      <p><router-link to="/sounds">SOUNDS</router-link></p>
     </div>
   </div>
 </template>

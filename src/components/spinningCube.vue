@@ -37,12 +37,6 @@
   }
 }
 
-.cube {
-  transform: rotate(10deg);
-  animation: rotate 10s infinite linear;
-  -webkit-animation: rotate 10s infinite linear;
-}
-
 // Cube styles
 .wrap {
   z-index: -1;
@@ -60,6 +54,9 @@
     width: 80vw;
     top: 0;
     left: 0;
+    transform: rotate(10deg);
+    animation: rotate 10s infinite linear;
+    -webkit-animation: rotate 10s infinite linear;
     transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
