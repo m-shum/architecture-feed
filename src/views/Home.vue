@@ -1,6 +1,6 @@
 <template>
   <div class="gallery-container">
-    <transition-group class="gallery-inner" name="fadeout" mode="out-in" tag="div">
+    <transition-group class="gallery-inner" name="fade" mode="out-in" tag="div">
       <div v-for="i in [currentIndex]" :key="i">
         <img :src="currentImg" />
       </div>
