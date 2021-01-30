@@ -1,14 +1,18 @@
 <template>
-  <div id="nav">
-    <div class="header-name"><p>BRUTAL</p><p>BRISTOL</p></div>
-    <div class="link-views">
-      <p><router-link to="/">SIGHTS</router-link></p>
-      <p><router-link to="/about">SOUNDS</router-link></p>
+  <div id="app">
+    <div id="nav">
+      <div class="header-name"><p>BRUTAL</p><p>BRISTOL</p></div>
+      <div class="link-views">
+        <p><router-link to="/">SIGHTS</router-link></p>
+        <p><router-link to="/about">SOUNDS</router-link></p>
+      </div>
     </div>
+  <router-view v-slot="{ Component }">
+    <transition name="fadeout">
+      <component :is="Component" />
+    </transition> 
+  </router-view>
   </div>
-  <transition name="fadeout" mode="out-in">
-      <router-view />
-  </transition>
 </template>
 
 
@@ -108,7 +112,7 @@ iframe {
 
 .fadeout-enter-active,
 .fadeout-leave-active {
-  transition: all 3s ease;
+  transition: all 0.2s ease;
 }
 
 .fadeout-leave-to {
