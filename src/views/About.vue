@@ -1,10 +1,10 @@
 <template>
   <div class="gallery-container">
-    <transition-group class="gallery-inner" name="fade" tag="div">
+    <div class="gallery-inner">
       <div class="aspect-ratio" v-for="i in [currentIndex]" :key="i">
-        <iframe :src="currentImg" allow="autoplay;"></iframe>
+        <iframe :src="currentImg" allow="autoplay;" frameborder="0"></iframe>
       </div>
-    </transition-group>
+    </div>
     <div class="gallery-nav">
       <a class="prev" @click="prev" href="#">Previous</a>
       <a class="next" @click="next" href="#">Next</a>
