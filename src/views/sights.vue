@@ -31,13 +31,20 @@ export default {
         "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F4.bp.blogspot.com%2F-9ViKYYdYDbk%2FUEE-NpcQFtI%2FAAAAAAAAASA%2F4_zoXt46QnU%2Fs1600%2FPrince%2BStreet%2B1.JPG&f=1&nofb=1",
         "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthespoonsterspouts.com%2Fwp-content%2Fuploads%2F2019%2F03%2FLloyds-building-brutalism.jpg&f=1&nofb=1",
         "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthespoonsterspouts.com%2Fwp-content%2Fuploads%2F2019%2F03%2Fstik-figures-graffiti-brutalism-bristol.jpg&f=1&nofb=1",
-        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F3d%2Fbe%2Fd2%2F3dbed297c07e7d346ea8039ae8273b37.jpg&f=1&nofb=1"
+        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F3d%2Fbe%2Fd2%2F3dbed297c07e7d346ea8039ae8273b37.jpg&f=1&nofb=1",
       ],
-      currentIndex: 0
+      currentIndex: 0,
     };
   },
 
+  mounted: function() {
+    this.startSlide();
+  },
+
   methods: {
+    startSlide: function() {
+      this.timer = setInterval(this.next, 2000);
+    },
     next: function() {
       this.currentIndex += 1;
     },
@@ -54,15 +61,15 @@ export default {
         opacity: 1,
         scale: 1,
         ease: "ease.out",
-        onComplete: done
+        onComplete: done,
       });
-    }
+    },
   },
 
   computed: {
     currentImg: function() {
       return this.images[Math.abs(this.currentIndex) % this.images.length];
-    }
-  }
+    },
+  },
 };
 </script>
