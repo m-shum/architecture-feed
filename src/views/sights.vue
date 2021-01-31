@@ -39,11 +39,12 @@ export default {
 
   mounted: function() {
     this.startSlide();
+    setTimeout(2000);
   },
 
   methods: {
     startSlide: function() {
-      this.timer = setInterval(this.next, 2000);
+      this.timer = setInterval(this.next, 3000);
     },
     next: function() {
       this.currentIndex += 1;
