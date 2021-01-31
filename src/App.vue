@@ -16,8 +16,8 @@ import spinningCube from "@/components/spinningCube.vue";
 export default {
   components: {
     topNavigation,
-    spinningCube,
-  },
+    spinningCube
+  }
 };
 </script>
 
@@ -124,10 +124,10 @@ img {
     font-size: 34px;
   }
 
-    .gallery-nav,
+  .gallery-nav,
   #nav {
     padding: 15px;
-}
+  }
 }
 
 @media (max-width: 750px) {

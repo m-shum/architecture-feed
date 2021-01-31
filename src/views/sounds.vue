@@ -1,7 +1,11 @@
 <template>
   <div class="gallery-container">
     <div class="gallery-inner">
-      <div class="aspect-ratio gallery-image" v-for="i in [currentIndex]" :key="i">
+      <div
+        class="aspect-ratio gallery-image"
+        v-for="i in [currentIndex]"
+        :key="i"
+      >
         <iframe :src="currentImg" allow="autoplay;" frameborder="0"></iframe>
       </div>
     </div>
@@ -22,9 +26,9 @@ export default {
         "https://www.youtube.com/embed/DZFTDIGpyn0?controls=0&autoplay=1&modestbranding=1&showinfo=0",
         "https://www.youtube.com/embed/hbe3CQamF8k?controls=0&autoplay=1&modestbranding=1&showinfo=0",
         "https://www.youtube.com/embed/KY0TZQTwwbk?controls=0&autoplay=1&modestbranding=1&showinfo=0",
-        "https://www.youtube.com/embed/8r31DFrFs5A?controls=0&autoplay=1&modestbranding=1&showinfo=0",
+        "https://www.youtube.com/embed/8r31DFrFs5A?controls=0&autoplay=1&modestbranding=1&showinfo=0"
       ],
-      currentIndex: 0,
+      currentIndex: 0
     };
   },
 
@@ -34,14 +38,14 @@ export default {
     },
     prev: function() {
       this.currentIndex -= 1;
-    },
+    }
   },
 
   computed: {
     currentImg: function() {
       return this.images[Math.abs(this.currentIndex) % this.images.length];
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -61,11 +65,10 @@ export default {
 }
 
 // media queries
-@media (max-width: 400px) and (orientation:portrait) {
+@media (max-width: 400px) and (orientation: portrait) {
   .aspect-ratio {
     width: 75vw;
     padding-bottom: 50%;
   }
 }
-
 </style>

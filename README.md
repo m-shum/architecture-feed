@@ -5,15 +5,14 @@ It's true what they say - Bristolians are obsessed with their city. I grew up in
 
 ### The Challenges
 
-I've never used Vue.js before, so even though I understand the principles, executing them was a learning curve.
+I've never used Vue.js before, which meant curbing the more ambitious goals for the project in favour of ones I could achieve in the timeframe.
 
 ### What I would've liked to accomplish
 
-- Turn the two slideshows into components controllable by a single function (instead of repeating the same function twice in two different views)
+- Turn the slideshows into components controllable by a single function (instead of repeating the same function twice in two different views). This would also mean the Next/Previous buttons wouldn't transition in and out of view when the user switched between feeds.
 - Treat gallery data as components(?) for ease of update
-- Use a CSS framework like Tachyons
-- Add animations to the slideshow
-- Run the slideshow function after all of its content has loaded instead of loading each slide only when it comes into view
+- Use a CSS framework like Tachyons & Two.js to animate the background
+- Make the slideshows scroll-activated (mousewheel & touch)
 
 
 ## Project setup
