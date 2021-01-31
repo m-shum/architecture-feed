@@ -123,6 +123,11 @@ img {
   #app {
     font-size: 34px;
   }
+
+    .gallery-nav,
+  #nav {
+    padding: 15px;
+}
 }
 
 @media (max-width: 750px) {
