@@ -2,7 +2,7 @@
   <div id="app">
     <topNavigation />
     <router-view v-slot="{ Component }">
-      <transition name="fadeout">
+      <transition name="fadeout" mode="out-in">
         <component :is="Component" />
       </transition>
     </router-view>
@@ -100,30 +100,20 @@ img {
 
 // Transitions
 
-.fadeout-enter,
-.fadeout-leave-to {
-  visibility: hidden !important;
-  opacity: 0 !important;
+.fadeout-enter {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .fadeout-enter-active,
 .fadeout-leave-active {
-  transition: all 0.2s ease;
+  transition: all 0.5s;
   overflow: hidden;
   visibility: visible;
   opacity: 1;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.8s ease;
-  overflow: hidden;
-  visibility: visible;
-  opacity: 1;
-  position: absolute;
-}
-.fade-enter,
-.fade-leave-to {
+.fadeout-leave-to {
   opacity: 0;
   visibility: hidden;
 }

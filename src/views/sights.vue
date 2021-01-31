@@ -2,7 +2,7 @@
   <div class="gallery-container">
     <div class="gallery-inner">
       <div class="gallery-image" v-for="i in [currentIndex]" :key="i">
-        <img :src="currentImg" />
+          <img :src="currentImg" />
       </div>
     </div>
     <div class="gallery-nav">
@@ -14,6 +14,7 @@
 
 
 <script>
+
 export default {
   name: "slideshow",
   data() {

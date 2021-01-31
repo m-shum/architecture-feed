@@ -9,13 +9,11 @@ I've never used Vue.js before, so even though I understand the principles, execu
 
 ### What I would've liked to accomplish
 
-- Better modular breakup of parts (see below)
-- Turn gallery parts into templates
-- Control template parts using a single gallery function instance
+- Turn the two slideshows into components controllable by a single function (instead of repeating the same function twice in two different views)
 - Treat gallery data as components(?) for ease of update
 - Use a CSS framework like Tachyons
 - Add animations to the slideshow
-- Add a search view which would allow the user to create their own feed by quering an API
+- Run the slideshow function after all of its content has loaded instead of loading each slide only when it comes into view
 
 
 ## Project setup
