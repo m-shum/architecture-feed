@@ -1,7 +1,7 @@
 <template>
   <div class="gallery-container">
     <div class="gallery-inner">
-      <div class="aspect-ratio" v-for="i in [currentIndex]" :key="i">
+      <div class="aspect-ratio gallery-image" v-for="i in [currentIndex]" :key="i">
         <iframe :src="currentImg" allow="autoplay;" frameborder="0"></iframe>
       </div>
     </div>
