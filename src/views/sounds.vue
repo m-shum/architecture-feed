@@ -47,7 +47,6 @@ export default {
 
 <style scoped lang="scss">
 .aspect-ratio {
-  position: relative;
   width: 60vw;
   height: 0;
   padding-bottom: 30%;
